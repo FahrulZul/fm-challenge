@@ -1,7 +1,241 @@
 @import '../../styles/config';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+//Very Dark Grayish Blue
+$darkGrayBlue: hsl(217, 19%, 35%);
+
+//Desaturated Dark Blue
+$darkBlue: hsl(214, 17%, 51%);
+
+//Grayish Blue
+$grayBlue: hsl(212, 23%, 69%);
+
+//Light Grayish Blue
+$lightGrayBlue: hsl(210, 46%, 95%);
+
+//Body copy: font-size: 13px;
 
 .ap-screen{
     width: 100%;
     height: 100vh;
-    background-color: $gray-50;
+    font-family: 'Manrope', sans-serif;
+    background-color: $lightGrayBlue;
+    @include flexCenter(row);
+}
+
+.ap-card{
+    background-color: #ffffff;
+    width: 100%;
+    min-width: 327px;
+    max-width: 327px;
+    border-radius: $rounded-xl;
+    box-shadow: 0 25px 50px -12px rgba(158, 175, 194, 0.25);
+    display: flex;
+    flex-direction: column;
+
+    @include lg{
+        max-width: 687px;
+        flex-direction: row;
+    }
+}
+
+.ap-imgContainer{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+
+    @include lg{
+        height: auto;
+        width: 39%;
+        border-top-left-radius: 0.75rem;
+        border-bottom-left-radius: 0.75rem;
+        border-top-right-radius: 0rem;
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 26%;
+
+        @include lg{
+            object-position: 7% 50%;
+        }
+    }
+}
+
+.ap-contentContainer{
+    position: relative;
+
+    @include lg{
+        width: 61%;
+    }
+}
+
+.ap-content{
+    padding: 2.2rem 2rem 0rem;
+
+    @include lg{
+        padding: 2rem 2.3rem 0rem;
+    }
+
+    h3{
+        font-size: 16px;
+        color: $darkGrayBlue;
+        margin-bottom: 0.8rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.01rem;
+
+        @include lg{
+            font-size: 19px;
+            line-height: 1.65rem;
+            margin-bottom: 0.67rem;
+        }
+    }
+
+    p{
+        font-size: 13px;
+        color: $darkBlue;
+        line-height: 1.25rem;
+        letter-spacing: 0.01rem;
+
+        @include lg{
+            font-size: 12px;
+            line-height: 1.2rem;
+            letter-spacing: 0.015rem;
+        }
+    }
+}
+
+.ap-profile-container{
+    padding: 2rem 2rem 1.2rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+
+    @include lg{
+        padding: 1.2rem 2.3rem 2rem;
+    }
+}
+
+.ap-profile{
+    display: flex;
+    align-items: center;
+
+    .ap-avatarWrapper{
+        width: 40px;
+        height: 40px;
+        border-radius: $rounded-full;
+        overflow: hidden;
+
+        @include lg{
+            width: 37px;
+            height: 37px;
+        }
+
+        img{
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .ap-infoContainer{
+        margin-left: 1rem;
+        font-size: 13px;
+        letter-spacing: 0.01rem;
+
+        @include lg{
+            font-size: 12px;
+        }
+
+        h4{
+            color: $darkGrayBlue;
+            margin-bottom: 0.2rem;
+            @include lg{
+                margin-bottom: 0.15rem;
+            }
+        }
+
+        span{
+            color: $grayBlue;
+        }
+    }
+}
+
+.shareBtn{
+    width: 28px;
+    height: 28px;
+    background-color: $lightGrayBlue;
+    border: none;
+    outline: none;
+    border-radius: $rounded-full;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.shareBtn[data-isOpen='true']{
+    background-color: $darkBlue;
+    
+    svg > path{
+        fill: #ffffff;
+    }
+}
+
+.ap-shareBlock-mobile{
+    position: absolute;
+    background-color: $darkGrayBlue;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ap-shareBlock-desktop{
+    position: absolute;
+    top: 47%;
+    right: -17%;
+    background-color: $darkGrayBlue;
+    padding: 0.8rem 2rem;
+    border-radius: $rounded-xl;
+    box-shadow: $shadow-xl;
+    display: flex;
+    align-items: center;
+
+    &::before{
+        content: '';
+        width: 15px;
+        height: 15px;
+        bottom: -7px;
+        right: 48%;
+        position: absolute;
+        background-color: $darkGrayBlue;
+        transform: rotate(45deg);
+    }
+}
+
+.ap-share{
+    color: $grayBlue;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-weight: 500;
+    font-size: 12px;
+
+    @include lg{
+        letter-spacing: 0.3rem;
+    }
+}
+
+.ap-share-link{
+    margin-left: 1rem;
 }

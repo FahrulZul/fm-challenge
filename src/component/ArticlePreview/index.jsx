@@ -10,14 +10,13 @@ const ArticlePreview = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    const desktop = {
-        open: {
-            display: 'flex',
-            opacity: 1
+    const share = {
+        mobile: {
+            opacity: isOpen ? 1 : 0,
+            translateY: isOpen ? 0 : 100,
         },
-        close: {
-            opacity: 0,
-            display: 'none'
+        desktop: {
+            opacity: isOpen ? 1 : 0,
         }
     }
 
@@ -68,32 +67,20 @@ const ArticlePreview = () => {
                                 <path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/>
                             </svg>
                         </motion.button>
-                        
-                        {/* Share on Mobile */}
+
                         <motion.div
-                            className="ap-shareBlock-mobile"
-                            initial={{y: 100}}
-                            animate={{
-                                y: isOpen && window.innerWidth < 1024 ? 0 : 100 ,
-                            }}
+                            className="ap-share-container"
+                            initial={false}
+                            animate={
+                                window.innerWidth < 1024 ? 'mobile' : 'desktop'
+                            }
                             transition={transition}
+                            variants={share}
                         >
                             <Share/>
                         </motion.div>
                       
                     </div>
-                    
-                    <motion.div 
-                        className="ap-shareBlock-desktop"
-                        initial={false}
-                        animate={ 
-                            isOpen && window.innerWidth >= 1024 ? 'open' : 'close'
-                        }
-                        variants={desktop}
-                        transition={transition}
-                    >
-                        <Share/>
-                    </motion.div>
 
                 </div>
 

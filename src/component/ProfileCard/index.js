@@ -13,7 +13,7 @@ const ProfileCard = () => {
                 </div>
 
                 <div className="pc-avatar">
-                    <div className="avatar-wrapper">
+                    <div className="pc-avatar-wrapper">
                         <img src={avatar} alt="avatar"/>
                     </div>
                 </div>
@@ -25,17 +25,17 @@ const ProfileCard = () => {
                 
                 <div className="pc-info">
 
-                    <div className="info-container">
+                    <div className="pc-info-container">
                         <h2>80K</h2>
                         <span>Followers</span>
                     </div>
 
-                    <div className="info-container">
+                    <div className="pc-info-container">
                         <h2>803K</h2>
                         <span>Likes</span>
                     </div>
 
-                    <div className="info-container">
+                    <div className="pc-info-container">
                         <h2>1.4K</h2>
                         <span>Photos</span>
                     </div>

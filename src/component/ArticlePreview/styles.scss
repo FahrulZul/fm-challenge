@@ -59,6 +59,7 @@ $lightGrayBlue: hsl(210, 46%, 95%);
         height: 100%;
         object-fit: cover;
         object-position: 50% 26%;
+        color: transparent;
 
         @include lg{
             object-position: 7% 50%;
@@ -143,6 +144,7 @@ $lightGrayBlue: hsl(210, 46%, 95%);
             width: 100%;
             object-fit: cover;
             object-position: center;
+            color: transparent;
         }
     }
 

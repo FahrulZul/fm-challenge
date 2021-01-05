@@ -2,6 +2,7 @@ import React from 'react'
 import './styles.scss'
 import profileCardComponent from '../../images/home/profile-card-component.jpg'
 import articlePreview from '../../images/home/article-preview.jpg'
+import codingBootcamp from '../../images/home/coding-bootcamp.jpg'
 import comingSoon from '../../images/home/coming-soon.svg'
 import {motion} from 'framer-motion'
 import {Link} from 'react-router-dom'
@@ -18,6 +19,11 @@ const Home = () => {
             title: 'Article Preview',
             imgUrl: articlePreview,
             url: '/article-preview',
+        },
+        {
+            title: 'Coding Bootcamp',
+            imgUrl: codingBootcamp,
+            url: '/coding-bootcamp',
         },
         {
             title: 'Coming Soon..',

@@ -1,0 +1,178 @@
+@import '../../styles/config';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+
+$darkBlue: hsl(240, 38%, 20%);
+$grayBlue: hsl(240, 18%, 77%);
+
+
+.cb-screen{
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    background-image: url('../../images/codingBootcamp/pattern-curve.svg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 290px;
+    padding: 1.5rem;
+
+    @include lg{
+        @include flexCenter(row);
+        background-size: 40%;
+    }
+}
+
+.cb-container{
+    width: 100%;
+    height: 90%;
+    min-width: 327px;
+    max-width: 327px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    @include lg{
+        max-width: $xl;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+}
+
+.cb-imgSection{
+    width: 100%;
+    height: 60%;
+    background-image: url('../../images/codingBootcamp/pattern-bg.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include flexCenter(column);
+
+    @include lg{
+        height: 100%;
+    }
+}
+
+.cb-imgWrapper{
+    width: 253px;
+    height: 253px;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    box-shadow: $shadow-xl;
+
+    @include lg{
+        width: 500px;
+        height: 500px;
+    }
+
+    img{
+        width: 101.5%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.cb-navBtn{
+    background-color: #ffffff;
+    border-radius: 2rem;
+    box-shadow: $shadow-xl;
+    margin-top: -20px;
+
+    @include lg{
+        transform: translateX(-143%);
+        margin-top: -26px;
+    }
+
+    button{
+        background-color: transparent;
+        outline: none;
+        border: none;
+        padding: 0.8rem 0.95rem 0.6rem;
+
+        @include lg{
+            padding: 1rem 1.2rem 0.9rem;
+        }
+
+        svg{
+            width: 9px;
+            height: 14px;
+
+            @include lg{
+                width: 12px;
+                height: 17px;
+
+                path{
+                    stroke-width: 2.5;
+                }
+            }
+        }
+    }
+}
+
+.cb-textSection{
+    width: 100%;
+    height: 40%;
+    background-image: url('../../images/codingBootcamp/pattern-quotes.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 60px;
+    margin-top: 0.4rem;
+    padding-top: 1.55rem;
+    text-align: center;
+
+    @include lg{
+        margin-top: 0;
+        padding-top: 4rem;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        background-size: 110px;
+        background-position: 19% 0%;
+        transform: translateX(22%);
+    }
+
+    p{
+        font-size: 18px;
+        color: #6B7280;
+        font-weight: 500;
+        line-height: 1.33;
+        letter-spacing: -0.01rem;
+        padding: 0 0.2rem;
+
+        @include lg{
+            font-size: 32px;
+            font-weight: 300;
+            color: $darkBlue;
+        }
+    }
+}
+
+.cb-profile{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.3rem;
+    font-size: 15px;
+
+    @include lg{
+        flex-direction: row;
+        margin-top: 2rem;
+        font-size: 18px;
+    }
+
+    h3{
+        font-size: inherit;
+        color: $darkBlue;
+        margin-bottom: 0.1rem;
+    }
+    span{
+        font-size: inherit;
+        font-weight: 500;
+        color: $grayBlue;
+
+        @include lg{
+            margin-left: 1rem;
+        }
+    }
+}

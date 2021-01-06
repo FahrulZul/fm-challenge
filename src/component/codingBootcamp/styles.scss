@@ -10,6 +10,7 @@ $grayBlue: hsl(240, 18%, 77%);
     font-family: 'Inter', sans-serif;
     width: 100%;
     height: 100vh;
+    min-height: 100vh;
     background-color: #ffffff;
     background-image: url('../../images/codingBootcamp/pattern-curve.svg');
     background-repeat: no-repeat;
@@ -26,7 +27,7 @@ $grayBlue: hsl(240, 18%, 77%);
 .cb-container{
     width: 100%;
     height: 90%;
-    min-width: 327px;
+    min-width: 270px;
     max-width: 327px;
     margin: 0 auto;
     display: flex;
@@ -34,6 +35,7 @@ $grayBlue: hsl(240, 18%, 77%);
 
     @include lg{
         max-width: $xl;
+        height: 635px;
         flex-direction: row-reverse;
         align-items: center;
     }
@@ -42,6 +44,8 @@ $grayBlue: hsl(240, 18%, 77%);
 .cb-imgSection{
     width: 100%;
     height: 60%;
+    min-height: 280px;
+    max-height: 327px;
     background-image: url('../../images/codingBootcamp/pattern-bg.svg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -50,25 +54,27 @@ $grayBlue: hsl(240, 18%, 77%);
 
     @include lg{
         height: 100%;
+        max-height: none;
     }
 }
 
 .cb-imgWrapper{
-    width: 253px;
-    height: 253px;
+    width: 75%;
+    height: 75%;
     border-radius: 0.25rem;
     overflow: hidden;
     box-shadow: $shadow-xl;
 
     @include lg{
-        width: 500px;
-        height: 500px;
+        width: 490px;
+        height: 490px;
     }
 
     img{
         width: 101.5%;
         height: 100%;
         object-fit: cover;
+        object-position: top;
     }
 }
 
@@ -88,6 +94,7 @@ $grayBlue: hsl(240, 18%, 77%);
         outline: none;
         border: none;
         padding: 0.8rem 0.95rem 0.6rem;
+        cursor: pointer;
 
         @include lg{
             padding: 1rem 1.2rem 0.9rem;

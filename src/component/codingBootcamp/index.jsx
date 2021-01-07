@@ -10,24 +10,24 @@ const variants = {
     enter: (direction) => {
       return {
         x: direction > 0 ? 1000 : -1000,
-        // opacity: 0
+        opacity: 0
       };
     },
     center: {
       zIndex: 1,
       x: 0,
-    //   opacity: 1
+      opacity: 1
     },
     exit: (direction) => {
       return {
         zIndex: 0,
         x: direction < 0 ? 1000 : -1000,
-        // opacity: 0
+        opacity: 0
       };
     }
   };
 
-  const transition = {duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96]}
+  const transition = {duration: 1, ease: [0.43, 0.13, 0.23, 0.96]}
 
 const CodingBootcamp = () => {
 
@@ -63,7 +63,6 @@ const CodingBootcamp = () => {
             <div className="cb-container">
                 <div className="cb-imgSection">
                     <div className="cb-imgWrapper">
-                        <AnimatePresence custom={direction}>
                             <motion.img
                                 key= {index}
                                 src={userData[index].imageUrl}
@@ -71,31 +70,42 @@ const CodingBootcamp = () => {
                                 custom={direction}
                                 initial='enter'
                                 animate='center'
-                                exit='exit'
                                 variants={variants}
-                                transition={transition}
                             />
-                        </AnimatePresence>
                     </div>
                     <div className="cb-navBtn">
-                        <button onClick={() => prev()}>
+                        <motion.button
+                            whileTap={{backgroundImage: 'linear-gradient(-90deg, #ffffff, #E2E8F0)'}}
+                            onClick={() => prev()}
+                        >
                             <PrevIcon/>
-                        </button>
+                        </motion.button>
 
-                        <button onClick={() => next()}>
+                        <motion.button
+                            whileTap={{backgroundImage: 'linear-gradient(90deg, #ffffff, #E2E8F0)'}}
+                            onClick={() => next()}
+                        >
                             <NextIcon/>
-                        </button>
+                        </motion.button>
                     </div>
                 </div>
-                <div className="cb-textSection">
+                <motion.div
+                    key={index}
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={transition}
+                    className="cb-textSection"
+                >
                     <p>
                         {userData[index].testimoni}
                     </p>
+
                     <div className="cb-profile">
                         <h3>{userData[index].name}</h3>
                         <span>{userData[index].title}</span>
                     </div>
-                </div>
+
+                </motion.div>
             </div>
 
         </div>

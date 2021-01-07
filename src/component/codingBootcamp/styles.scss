@@ -83,6 +83,8 @@ $grayBlue: hsl(240, 18%, 77%);
     border-radius: 2rem;
     box-shadow: $shadow-xl;
     margin-top: -20px;
+    z-index: 10;
+    overflow: hidden;
 
     @include lg{
         transform: translateX(-143%);
@@ -90,6 +92,7 @@ $grayBlue: hsl(240, 18%, 77%);
     }
 
     button{
+        background-image: linear-gradient(90deg, #ffffff, #ffffff);
         background-color: transparent;
         outline: none;
         border: none;

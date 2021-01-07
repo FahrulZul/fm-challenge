@@ -4,7 +4,7 @@ import tanya from '../../images/codingBootcamp/image-tanya.jpg'
 import john from '../../images/codingBootcamp/image-john.jpg'
 import NextIcon from './svg/Next'
 import PrevIcon from './svg/Prev'
-import {motion, AnimatePresence} from 'framer-motion'
+import {motion} from 'framer-motion'
 
 const variants = {
     enter: (direction) => {

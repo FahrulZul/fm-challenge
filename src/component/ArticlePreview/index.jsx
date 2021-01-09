@@ -25,7 +25,12 @@ const ArticlePreview = () => {
     return (
         <div className="ap-screen">
 
-            <div className="ap-card">
+            <motion.div
+                initial={{y: 70, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={transition}
+                className="ap-card"
+            >
                 
                 <div className="ap-imgContainer">
                     <img src={apImg} alt="..."/>
@@ -84,7 +89,7 @@ const ArticlePreview = () => {
 
                 </div>
 
-            </div>
+            </motion.div>
 
         </div>
     )

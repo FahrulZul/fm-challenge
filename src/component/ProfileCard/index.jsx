@@ -2,11 +2,25 @@ import React from 'react'
 import './styles.scss'
 import banner from '../../images/profileCard/bg-pattern-card.svg'
 import avatar from '../../images/profileCard/image-victor.jpg'
+import { motion } from 'framer-motion'
 
 const ProfileCard = () => {
+
+    const transition= {duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96]};
+
     return (
-        <div className="pc-screen">
-            <div className="profileCard">
+        <motion.div
+            initial={{backgroundPosition: 'right 100vw bottom 100vh, left 100vw top 100vh'}}
+            animate={{backgroundPosition: "right 52vw bottom 34.5vh, left 48vw top 52vh"}}
+            transition={transition}
+            className="pc-screen"
+        >
+            <motion.div
+                initial={{y: 70, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96], delay: 0.7}}
+                className="profileCard"
+            >
 
                 <div className="pc-banner">
                     <img src={banner} alt="Banner"/>
@@ -42,8 +56,8 @@ const ProfileCard = () => {
 
                 </div>
 
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 }
 

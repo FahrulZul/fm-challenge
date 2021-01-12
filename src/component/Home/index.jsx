@@ -3,7 +3,8 @@ import './styles.scss'
 import profileCardComponent from '../../images/home/profile-card-component.jpg'
 import articlePreview from '../../images/home/article-preview.jpg'
 import codingBootcamp from '../../images/home/coding-bootcamp.jpg'
-import comingSoon from '../../images/home/coming-soon.svg'
+import loopStudios from '../../images/home/loopstudios.jpg'
+// import comingSoon from '../../images/home/coming-soon.svg'
 import {motion} from 'framer-motion'
 import {Link} from 'react-router-dom'
 
@@ -26,10 +27,15 @@ const Home = () => {
             url: '/coding-bootcamp',
         },
         {
-            title: 'Coming Soon..',
-            imgUrl: comingSoon,
-            url: '/',
+            title: 'LoopStudios Landing Page',
+            imgUrl: loopStudios,
+            url: '/loopstudios',
         },
+        // {
+        //     title: 'Coming Soon..',
+        //     imgUrl: comingSoon,
+        //     url: '/',
+        // },
     ]
     return (
         <div className="home-screen">

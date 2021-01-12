@@ -16,6 +16,7 @@ const ArticlePreview = () => {
             translateY: isOpen ? 0 : 100,
         },
         desktop: {
+            display: isOpen ? 'flex' : 'none',
             opacity: isOpen ? 1 : 0,
         }
     }

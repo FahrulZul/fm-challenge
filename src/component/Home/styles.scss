@@ -14,6 +14,11 @@
 
 .link{
     text-decoration: none;
+
+    &:active, &:focus{
+        outline: none;
+        border: none;
+    }
 }
 
 .home-gridContainer{
@@ -42,6 +47,7 @@
     max-width: 300px;
     margin: 0 auto;
     border: $border;
+    outline: none;
 
     &-image{
         height: 170px;

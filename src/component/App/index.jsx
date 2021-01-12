@@ -4,6 +4,7 @@ import Home from '../Home'
 import ProfileCard from '../ProfileCard'
 import ArticlePreview from '../ArticlePreview';
 import CodingBootcamp from '../codingBootcamp';
+import LoopStudios from '../LoopStudios';
 
 function App() {
 
@@ -21,6 +22,9 @@ function App() {
           </Switch>
           <Switch>
             <Route exact path='/coding-bootcamp'><CodingBootcamp/></Route>
+          </Switch>
+          <Switch>
+            <Route exact path='/loopstudios'><LoopStudios/></Route>
           </Switch>
         </div>
       </Router>

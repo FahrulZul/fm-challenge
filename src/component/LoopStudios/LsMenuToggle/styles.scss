@@ -1,0 +1,28 @@
+.LsMenuToggle-container{
+    position: relative;
+    width: 26px;
+    height: 16px;
+    cursor: pointer;
+    // border: 1px solid red;
+}
+
+.top, .middle, .bottom{
+    position: absolute;
+    width: 24px;
+    height: 1.7px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.top{
+    top: 0;
+}
+
+.middle{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bottom{
+    bottom: 0;
+}

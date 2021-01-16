@@ -1,10 +1,8 @@
 import React from 'react'
 import './styles.scss'
-import {motion, useCycle} from 'framer-motion'
+import {motion} from 'framer-motion'
 
-const LsMenuToggle = ({toggle}) => {
-
-    const [isOpen, toggleOpen] = useCycle(false, true)
+const LsMenuToggle = ({isOpen, toggle}) => {
 
     const topVariants = {
         open: {
@@ -18,7 +16,11 @@ const LsMenuToggle = ({toggle}) => {
         close: {
             top: '0%',
             y: '0%',
-            rotate: 0
+            rotate: 0,
+            transition: {
+                y: {delay: 0.5},
+                top: {delay: 0.5}
+            }
         }
     }
 
@@ -32,7 +34,10 @@ const LsMenuToggle = ({toggle}) => {
         },
         close: {
             y: '-50%',
-            rotate: 0
+            rotate: 0,
+            transition: {
+                y: {delay: 0.4}
+            }
         }
     }
 
@@ -48,16 +53,21 @@ const LsMenuToggle = ({toggle}) => {
         close: {
             bottom: '0%',
             y: '0%',
-            rotate: 0
+            rotate: 0,
+            transition: {
+                y: {delay: 0.5}, 
+                bottom: {delay: 0.5}
+            }
         }
     }
 
     return (
         <div 
             className="LsMenuToggle-container"
-            onClick={() => toggleOpen()}
+            onClick={toggle}
         >
             <motion.span
+                initial={false}
                 animate={
                     isOpen ? 'open' : 'close'
                 }
@@ -66,6 +76,7 @@ const LsMenuToggle = ({toggle}) => {
             ></motion.span>
 
             <motion.span
+                initial={false}
                 animate={
                     isOpen ? 'open' : 'close'
                 }
@@ -74,6 +85,7 @@ const LsMenuToggle = ({toggle}) => {
             ></motion.span>
 
             <motion.span
+                initial={false}
                 animate={
                     isOpen ? 'open' : 'close'
                 }

@@ -2,164 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
 
-
 $white: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 0%);
 $darkGray: hsl(0, 0%, 55%);
 $veryDarkGray: hsl(0, 0%, 41%);
 
+$padding-320: 0 1.25rem;
+$padding-375: 0 1.5rem;
+
 .lsPage{
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100vh; 
     background-color: $white;
 }
 
-.lsHeader{
-    position: absolute;
-    width: 100%;
-    height: 104px;
-    padding: 0 1.5rem;
-
-    &-container{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        img{
-            width: 144px;
-        }
-    }
-}
-
-.lsHero{
-    font-family: 'Josefin Sans', sans-serif;
-    width: 100%;
-    height: 97.5vh;
-    background-image: url('../../images/loopstudios/mobile/image-hero.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 0 1.5rem;
-    margin-bottom: 2.5vh;
-
-    &-container{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    &-title{
-        width: 100%;
-        padding: 1.6rem 1.4rem 1.1rem;
-        text-transform: uppercase;
-        color: $white;
-        font-size: 10.5vw;
-        font-weight: 300;
-        letter-spacing: 0.5px;
-        line-height: 97%;
-        border: 2px solid $white;
-    }
-}
-
-.lsAbout{
-    width: 100%;
-    height: 100vh;
-    padding: 0 1.5rem;
-    display: flex;
-    align-items: center;
-
-    &-container{
-        width: 100%;
-        height: fit-content;
-
-        img{
-            width: 100%;
-        }
-
-        h2{
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 2rem;
-            font-weight: 300;
-            line-height: 1;
-            text-transform: uppercase;
-            text-align: center;
-            color: $black;
-            margin-top: 2.7rem;
-        }
-        p{
-            font-family: 'Alata', sans-serif;
-            font-size: 15px;
-            text-align: center;
-            line-height: 1.6;
-            color: $darkGray;
-            margin-top: 1.2rem;
-            padding: 0 1.5rem;
-        }
-    }
-}
-
-.lsCreation{
-    font-family: 'Josefin Sans', sans-serif;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 1.5rem;
-
-    &-container{
-        width: 100%;
-        height: fit-content;
-
-        h2{
-            font-size: 2rem;
-            font-weight: 300;
-            text-transform: uppercase;
-            text-align: center;
-        }
-    }
-
-    &-gridContainer{
-        width: 100%;
-        height: fit-content;
-        margin-top: 2.6rem;
-        display: grid;
-        grid-gap: 1.5rem;
-    }
-
-    &-card{
-        position: relative;
-        width: 100%;
-        height: 120px;
-        
-        &::after{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.1), rgba(0,0,0,0));
-            z-index: 1;
-        }
-
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            z-index: -1;
-        }
-
-        h3{
-            position: absolute;
-            width: 130px;
-            bottom: 20%;
-            left: 6%;
-            color: $gray-200;
-            text-transform: uppercase;
-            z-index: 2;
-            font-weight: 300;
-            font-size: 1.5rem;
-        }
-    }
-}
+@import './styles/lsHeader';
+@import './styles/lsHero';
+// @import './styles/lsAbout';
+// @import './styles/lsCreation';
+// @import './styles/lsFooter';

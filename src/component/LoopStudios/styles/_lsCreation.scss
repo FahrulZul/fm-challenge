@@ -1,0 +1,91 @@
+.lsCreation{
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 6.5vw;
+
+    &-container{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 5.5rem;
+
+        h2{
+            font-size: 1.7rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            text-align: center;
+
+            @include rwd(375){
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &-gridContainer{
+        width: 100%;
+        height: fit-content;
+        margin: 2.6rem 0 2rem;
+        display: grid;
+        grid-gap: 1.5rem;
+    }
+
+    &-card{
+        position: relative;
+        width: 100%;
+        height: auto;
+        
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.1), rgba(0,0,0,0));
+            z-index: 1;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        h3{
+            position: absolute;
+            width: 130px;
+            bottom: 20%;
+            left: 6%;
+            color: $gray-200;
+            text-transform: uppercase;
+            z-index: 2;
+            font-weight: 300;
+            font-size: 1.2rem;
+
+            @include rwd(375){
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &-btn{
+        font-family: 'Alata', sans-serif;
+        font-size: 13px;
+        text-transform: uppercase;
+        background-color: $white;
+        border: 2px solid rgba(0,0,0,0.5);
+        padding: 0.5rem 2rem;
+        margin: 0 auto;
+        letter-spacing: 0.2rem;
+
+        @include rwd(375){
+            font-size: 15px;
+            padding: 0.5rem 2.25rem;
+            letter-spacing: 0.3rem;
+        }
+    }
+}

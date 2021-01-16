@@ -37,7 +37,7 @@ export const creationData = [
         imgUrl: mobileSeven,
     },
     {
-        title: 'Makwe It Fisheye',
+        title: 'Make It Fisheye',
         imgUrl: mobileEight,
     },
 ]

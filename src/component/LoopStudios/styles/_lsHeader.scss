@@ -5,8 +5,13 @@
     padding: $padding-320;
 
     @include rwd(375) {
-        height: 105px;
+        height: 104px;
         padding: $padding-375;
+    }
+
+    @include rwd(414) {
+        height: 114px;
+        padding: $padding-414;
     }
 
     &-container{
@@ -22,6 +27,10 @@
 
             @include rwd(375) {
                 width: 144px;
+            }
+
+            @include rwd(414){
+                width: 160px;
             }
         }
     }

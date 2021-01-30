@@ -186,7 +186,7 @@ $lightGrayBlue: hsl(210, 46%, 95%);
     }
 }
 
-.shareBtn[data-isOpen='true']{
+.ap-active{
     background-color: $darkBlue;
     
     svg > path{
